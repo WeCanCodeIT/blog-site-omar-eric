@@ -7,7 +7,7 @@ class BlogPost {
       this.destination = destination;
       this.firstName = firstName;
       this.lastName = lastName;
-      this.
+      this.blogPostText = blogPostText;
     }
   
     getFullName () {
@@ -17,10 +17,10 @@ class BlogPost {
     getId () {
       return this.id;
     }
-  
+
     getText () {
       return this.blogPostText;
     }
   }
-  
+
   module.exports = BlogPost;
