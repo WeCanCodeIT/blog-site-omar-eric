@@ -2,9 +2,9 @@
 class BlogPost {
 
   
-    constructor(id, firstName = "John", lastName = "Doe", destination = "home", blogPostText = "nothing yet", tags) {
+    constructor(id, firstName = "John", lastName = "Doe", destination = "home", blogPostText = "nothing yet") {
       this.blogPostId = id;
-      this.tags = tags;
+      // this.tags = tags;
       this.destination = destination;
       this.firstName = firstName;
       this.lastName = lastName;
@@ -16,7 +16,7 @@ class BlogPost {
     }
   
     getId () {
-      return this.id;
+      return this.blogPostId;
     }
 
     getText () {

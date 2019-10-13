@@ -1,19 +1,19 @@
 
 class Blog {
     constructor() {
-      this.blog = new Map();
+      this.blogPosts = new Map();
     }
   
     addBlogPost(blogPostToAdd) {
-      this.blog.set(blogPostToAdd.getId(), blogPostToAdd);
+      this.blogPosts.set(blogPostToAdd.getId(),blogPostToAdd);
     }
   
     getBlogPost(blogPostId) {
-      return this.blog.get(blogPostId);
+      return this.blogPosts.get(blogPostId);
     }
   
-    getBlogArray() {
-      return [...this.blog.values()];
+    getBlogPostsArray() {
+      return [...this.blogPosts.values()];
     }
   }
   
