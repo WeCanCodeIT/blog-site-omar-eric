@@ -14,7 +14,9 @@
     "http-errors": "~1.6.3",
     "jest": "^24.9.0",
     "morgan": "~1.9.1",
-    "readline-sync": "^1.4.10"
+    "mysql2": "^1.7.0",
+    "readline-sync": "^1.4.10",
+    "sequelize": "^5.19.6"
   },
   "main": "app.js",
   "devDependencies": {},
