@@ -1,7 +1,7 @@
-const db = require('../util/db')
+const db = require('../data/db')
 const Sequelize = require('sequelize');
 
-const Review = db.define('review', {
+const Blog = db.define('blog', {
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
@@ -19,15 +19,15 @@ const Review = db.define('review', {
         },
         destination: {
             type: Sequelize.STRING,
-            allowNull: false
+            allowNull: true
         },
         author: {
             type: Sequelize.STRING,
-            allowNull: false
+            allowNull: true
         },
         date:{
             type: Sequelize.DATEONLY,
-            allowNull: false
+            allowNull: true
         }
 
    

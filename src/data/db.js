@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize(
-  'TravelForum', // db name
+  'travelforum', // db name
   'root', // db username
   'Password12!@#', // db password
   { // config object
@@ -10,4 +10,4 @@ const sequelize = new Sequelize(
   }
 )
 
-module.exports = sequelize
+module.exports = sequelize;
