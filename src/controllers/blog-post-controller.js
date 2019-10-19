@@ -23,8 +23,8 @@ class BlogPostController {
         const blogPost = req.body.blogPost;
         const destination = req.body.destination;
         const author = req.body.author;
-        // const date = req.body.date;
-        const date = getDate();
+        const date = req.body.date;
+        // const date = getDate();
 
         await BlogPostService.save(new BlogPostDomainObject(blogPost, destination, author, date));
             res.redirect("/");

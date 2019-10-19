@@ -23,15 +23,15 @@ class BlogPost {
       return this.blogPostText;
     }
 
-    getDate() {
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    // getDate() {
+    //     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         
-        const d = new Date();
+    //     const d = new Date();
 
-        let date = months[d.getMonth()] + " " + d.getDate() +", " + d.getFullYear();
+    //     let date = months[d.getMonth()] + " " + d.getDate() +", " + d.getFullYear();
 
-      return date;
-    }
+    //   return date;
+    // }
   }
 
   module.exports = BlogPost;
