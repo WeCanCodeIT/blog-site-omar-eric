@@ -1,5 +1,5 @@
-const BlogPost = require("./views/BlogPost");
-const Blog = require("./views/Blog");
+const BlogPost = require("../views/BlogPost");
+const Blog = require("../views/Blog");
 
 const input = require("readline-sync");
 
