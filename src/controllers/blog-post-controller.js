@@ -24,22 +24,12 @@ class BlogPostController {
         const destination = req.body.destination;
         const author = req.body.author;
         const date = req.body.date;
-        // const date = getDate();
+        
 
         await BlogPostService.save(new BlogPostDomainObject(blogPost, destination, author, date));
             res.redirect("/");
     }
-
-    getDate() {
-        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        
-        const d = new Date();
-
-        let date = months[d.getMonth()] + " " + d.getDate() +", " + d.getFullYear();
-
-      return date;
-    }
-         
+   
 }
 
 

@@ -2,12 +2,8 @@ const BlogPostDomainObject = require('../models/Blog');
 const BlogPostService = require('../service/blog-service'); //make this
 const Blog = require('../models/Blog.sequelize');
 
-class ViewPostController { 
+class blogPostController { 
 
-    static async renderAll (req, res) {
-        const blogPosts = await BlogPostService.findAll();
-        res.render("index", {blogPosts: blogPosts});
-    }
 
     static async renderBlogPost (req, res) {
         const id = req.params.id;
@@ -23,4 +19,4 @@ class ViewPostController {
 }
 
 
-module.exports = ViewPostController;
+module.exports = BlogPostController;

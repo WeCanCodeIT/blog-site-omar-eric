@@ -4,7 +4,7 @@ var blogPostRouter = express.Router();
 const blogPostController = require('../src/controllers/blog-post-controller')
 
 /* GET home page. */
-router.get('/', blogPostController.renderAll);
+
 router.get('/blogPost/:id', blogPostController.renderBlogPost);
 
 /* POST new review */
