@@ -26,8 +26,9 @@ const Blog = db.define('blog', {
             allowNull: true
         },
         date:{
-            type: Sequelize.DATEONLY,
-            allowNull: true
+            type: Sequelize.DATE,
+            allowNull: true,
+            default: Sequelize.NOW
         }
 
    
