@@ -11,28 +11,14 @@
     </h1>
   </head>
   <body>
-      <div >
-          {{#each blogPosts}}
-          <a href ="/blogPost/{{id}}">
-            <p >{{blogPost}}</p>
-          {{/each}}
-          <!-- <p >{{review.location}}</p>
-          <p >{{review.author}}</p>
-          <p >{{review.reviewBody}}</p> -->
-        </a>
+    {{#each blogPosts}}
+      <div class="box">
+        <p > Author: {{author}}</p>
+        <p > Destination: {{destination}}</p>
+        <p > Date: {{date}}</p>
+        <p > Blog: {{blogPost}}</p>
       </div>
-        
+    {{/each}}
+    
   </body>
 </html>
-
-
-
-       <!-- <ul >
-        <a class="names">
-          <li>Chicago</li>
-          <li>London</li>
-          <li>Istanbul</li>
-          <li>Shanghai</li>
-          <li><a class="names forlink" href="../views/index.hbs">Back</a></li>
-        </a>
-    </ul> -->

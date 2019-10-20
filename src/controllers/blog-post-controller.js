@@ -6,7 +6,7 @@ class BlogPostController {
 
     static async renderAll (req, res) {
         const blogPosts = await BlogPostService.findAll();
-        res.render("blog-posts-page", {blogPosts: blogPosts});
+        res.render("blog-post-page", {blogPosts: blogPosts});
     }
 
     static async renderBlogPost (req, res) {
@@ -24,16 +24,13 @@ class BlogPostController {
         const date = req.body.date;
         
         const blogPostObject = new BlogPostDomainObject(blogPost, destination, author, date);
- 
             const newBlogPost = await blogPostService.save(blogPostObject);
-
-         //   res.redirect("/blog-post-page/" + newBlogPost.id);
+            res.redirect("home-page" + newBlogPost.id);
 
         }
 
     }
    
-
 
 
 
