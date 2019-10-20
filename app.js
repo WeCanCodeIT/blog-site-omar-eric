@@ -23,6 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('home-page', blogPostRouter)
 app.use('/view-posts-page', viewRouter);
 app.use('/blog-post-page', blogPostRouter);
 app.use('/users', usersRouter);

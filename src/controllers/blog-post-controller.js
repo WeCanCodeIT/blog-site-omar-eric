@@ -24,15 +24,11 @@ class BlogPostController {
         const date = req.body.date;
         
         const blogPostObject = new BlogPostDomainObject(blogPost, destination, author, date);
-            const newBlogPost = await blogPostService.save(blogPostObject);
-            res.redirect("home-page" + newBlogPost.id);
+        await blogPostService.save(blogPostObject);
+            res.redirect("/" );
 
         }
 
     }
-   
-
-
-
 
 module.exports = BlogPostController;
