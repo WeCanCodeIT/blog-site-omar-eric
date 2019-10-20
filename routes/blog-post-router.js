@@ -3,11 +3,13 @@ var blogPostRouter = express.Router();
 
 const blogPostController = require('../src/controllers/blog-post-controller')
 
-/* GET home page. */
+/* GET Post. */
 
-router.get('/blogPost/:id', blogPostController.renderBlogPost);
+blogPostRouter.get('/blogPost/:id', blogPostController.renderBlogPost);
 
-/* POST new review */
-router.post('/', blogPostController.addBlogPost);
+/* POST new Post */
+blogPostRouter.post('blog-post-page', blogPostController.addBlogPost);
+
+// router.get('/', blogPostController.renderAll);
 
 module.exports = blogPostRouter;

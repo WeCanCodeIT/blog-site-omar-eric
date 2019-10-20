@@ -1,13 +1,13 @@
 var express = require('express');
-var ViewPostRouter = express.Router();
+var ViewPostsRouter = express.Router();
 
-const ViewPostController = require('../src/controllers/view-posts-controller')
+const ViewPostsController = require('../src/controllers/view-posts-controller');
 
 /* GET home page. */
-router.get('/', ViewPostsController.renderAll);
-router.get('/blogPost:id', ViewPostController.renderBlogPost);
+ViewPostsRouter.get('/', ViewPostsController.renderAll);
+ViewPostsRouter.get('/blogPost:id/', ViewPostsController.renderBlogPost);
 
 // /* POST new review */
 // router.post('/', viewPostsController.addBlogPost);
 
-module.exports = ViewPostRouter;
+module.exports = ViewPostsRouter;

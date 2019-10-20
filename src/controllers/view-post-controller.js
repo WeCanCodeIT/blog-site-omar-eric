@@ -1,8 +1,8 @@
 const BlogPostDomainObject = require('../models/Blog');
-const BlogPostService = require('../service/blog-service'); //make this
+const BlogPostService = require('../service/blog-service');
 const Blog = require('../models/Blog.sequelize');
 
-class blogPostController { 
+class BlogPostController { 
 
 
     static async renderBlogPost (req, res) {

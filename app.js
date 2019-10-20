@@ -4,10 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sequelize = require('./src/data/db');
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes');
 var usersRouter = require('./routes/users');
 var blog = require('./src/models/Blog.sequelize');
-var viewRouter = require('./routes/view-posts-page-router')
+var viewRouter = require('./routes/view-posts-page-router');
+var blogPostRouter = require('./routes/blog-post-router');
 
 var app = express();
 
@@ -22,7 +23,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/view-posts-page',viewRouter);
+app.use('/view-posts-page', viewRouter);
+app.use('/blog-post-page', blogPostRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

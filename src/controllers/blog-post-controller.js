@@ -6,17 +6,15 @@ class BlogPostController {
 
     static async renderAll (req, res) {
         const blogPosts = await BlogPostService.findAll();
-        res.render("index", {blogPosts: blogPosts});
+        res.render("blog-posts-page", {blogPosts: blogPosts});
     }
 
     static async renderBlogPost (req, res) {
         const id = req.params.id;
-        try{
+       
             const blogPost = await BlogPostService.findBlogPost(id) 
-            res.render("blogPost", { blogPost : blogPost });
-        } catch (error) {
-            res.render("error", {error: error});
-        }
+            res.render("blog-post-page", { blogPost : blogPost });
+        
     }
 
     static async addBlogPost (req, res) {
@@ -25,12 +23,19 @@ class BlogPostController {
         const author = req.body.author;
         const date = req.body.date;
         
+        const blogPostObject = new BlogPostDomainObject(blogPost, destination, author, date);
+ 
+            const newBlogPost = await blogPostService.save(blogPostObject);
 
-        await BlogPostService.save(new BlogPostDomainObject(blogPost, destination, author, date));
-            res.redirect("/");
+         //   res.redirect("/blog-post-page/" + newBlogPost.id);
+
+        }
+
     }
    
-}
+
+
+
 
 
 module.exports = BlogPostController;

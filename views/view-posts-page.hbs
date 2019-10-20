@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>View Posts Page</title>
+    <h1> 
+      <a>Read the Blogs!</a>
+    </h1>
+  </head>
+  <body>
+      <div >
+          {{#each blogPosts}}
+          <a href ="/blogPost/{{id}}">
+            <p >{{blogPost}}</p>
+          {{/each}}
+          <!-- <p >{{review.location}}</p>
+          <p >{{review.author}}</p>
+          <p >{{review.reviewBody}}</p> -->
+        </a>
+      </div>
+        
+  </body>
+</html>
+
+
+
+       <!-- <ul >
+        <a class="names">
+          <li>Chicago</li>
+          <li>London</li>
+          <li>Istanbul</li>
+          <li>Shanghai</li>
+          <li><a class="names forlink" href="../views/index.hbs">Back</a></li>
+        </a>
+    </ul> -->
