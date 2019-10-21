@@ -1,18 +1,18 @@
 const BlogPostDomainObject = require('../models/Blog');
-const BlogPostService = require('../service/blog-service'); //make this
+const blogPostService = require('../service/blog-service'); //make this
 const Blog = require('../models/Blog.sequelize');
 
 class BlogPostController { 
 
     static async renderAll (req, res) {
-        const blogPosts = await BlogPostService.findAll();
+        const blogPosts = await blogPostService.findAll();
         res.render("blog-post-page", {blogPosts: blogPosts});
     }
 
     static async renderBlogPost (req, res) {
         const id = req.params.id;
        
-            const blogPost = await BlogPostService.findBlogPost(id) 
+            const blogPost = await blogPostService.findBlogPost(id) 
             res.render("blog-post-page", { blogPost : blogPost });
         
     }
